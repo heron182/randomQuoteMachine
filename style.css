@@ -10,8 +10,14 @@ html {
     background: rgba(0,0,0,0.3);
 }
 
+#btntwitter:hover{
+    background: rgba(0,0,0,0.3);
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Josefin Sans', cursive;
+  font-size: 25px;
+  color: white;
   margin: 0;
   background-image: linear-gradient(260deg, #3FDCFC 0%, #89FC00 100%);
 }
@@ -33,6 +39,21 @@ body {
     height:33%;
     width:50%;
     background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+
+#p-quote, #p-author {
+    flex-basis: 1;
+    margin: 0 15px 10px 15px;
+    text-align: center;
+}
+
+#p-author{
+    text-align: right;
 }
 
 .quote-btns{
@@ -50,10 +71,12 @@ body {
     justify-content: center;
 }
 
-#btnquote{
-    border: None;
+#btnquote, #btntwitter{
+    border: 1px solid white;
     border-radius: 6px;
     padding: 10px;
+    margin: 10px;
     background: None;
     display: inline-block;
+    color: white;
 }
