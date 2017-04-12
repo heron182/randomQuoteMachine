@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
     function getQuote() {
-        console.log('Button clicked');
         $.ajax({
             headers: {
                 'X-Mashape-Key': 'gXCPrfTiawmsh9gtszFXIUT4piPZp1Ipk4ljsnQRoT0zyUNu4V',
@@ -12,8 +11,11 @@ $(document).ready(function() {
             method: 'POST',
         }).done(function(res) {
             res = JSON.parse(res);
-            console.log(res.quote);
-            console.log(res.author);
+            var tweet = encodeURI(res.quote+'\n- '+res.author);
+            console.log(tweet);
+            $("#btntwitter").attr("href", $("#btntwitter").attr("href")+tweet);
+            $("#p-quote").text(res.quote);
+            $("#p-author").text('- '+res.author);
         });
     }
 
