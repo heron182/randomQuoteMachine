@@ -6,11 +6,11 @@ html {
   box-sizing: inherit;
 }
 
-#btnquote:hover{
+#a-quote:hover{
     background: rgba(0,0,0,0.3);
 }
 
-#btntwitter:hover{
+#a-twitter:hover{
     background: rgba(0,0,0,0.3);
 }
 
@@ -44,6 +44,9 @@ body {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+    -webkit-box-shadow: 10px 13px 28px -2px rgba(0,0,0,0.55);
+    -moz-box-shadow: 10px 13px 28px -2px rgba(0,0,0,0.55);
+    box-shadow: 10px 13px 28px -2px rgba(0,0,0,0.55);
     }
 
 #p-quote, #p-author {
@@ -56,7 +59,7 @@ body {
     text-align: right;
 }
 
-.quote-btns{
+.quote-nav{
     display: flex;
     list-style: none;
     width: 50%;
@@ -65,13 +68,13 @@ body {
 }
 
 
-.quote-btns > * {
+.quote-nav > * {
     display: flex;
     flex: 100%;
     justify-content: center;
 }
 
-#btnquote, #btntwitter{
+#a-quote, #a-twitter{
     border: 1px solid white;
     border-radius: 6px;
     padding: 10px;

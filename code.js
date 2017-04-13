@@ -12,13 +12,14 @@ $(document).ready(function() {
         }).done(function(res) {
             res = JSON.parse(res);
             var tweet = encodeURI(res.quote+'\n- '+res.author);
+            var tweetUrl = 'https://twitter.com/intent/tweet?text='+tweet;
             console.log(tweet);
-            $("#btntwitter").attr("href", $("#btntwitter").attr("href")+tweet);
-            $("#p-quote").text(res.quote);
+            $("#a-twitter").attr("href", tweetUrl);
+            $("#i-quote").text(res.quote);
             $("#p-author").text('- '+res.author);
         });
     }
 
-    $("#btnquote").on("click", getQuote);
+    $("#a-quote").on("click", getQuote);
 
 });
